@@ -185,6 +185,40 @@ code {
 /* ========================================================
    SECTIONS
 ======================================================== */
+.hero__grid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 48px;
+}
+
+.hero__content {
+  flex: 1;
+}
+
+.hero__photo {
+  flex-shrink: 0;
+}
+
+.hero__photo-img {
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 768px) {
+  .hero__grid {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .hero__photo-img {
+    width: 180px;
+    height: 180px;
+  }
+}
 .section {
   max-width: var(--max-width);
   margin: 0 auto;
