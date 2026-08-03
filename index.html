@@ -12,6 +12,51 @@
 </head>
 <body>
 
+  <!-- CONTACT MODAL -->
+<div id="contactModal" class="modal-overlay">
+  <div class="modal-box">
+    <button type="button" class="modal-close" id="closeContactModal">&times;</button>
+    <h3 class="modal-title">Let's connect</h3>
+    <p class="modal-subtitle">Fill in your details and I'll get back to you.</p>
+
+    <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="contactForm">
+      <input type="hidden" name="form-name" value="contact">
+      <p style="display:none">
+        <label>Don't fill this out: <input name="bot-field"></label>
+      </p>
+
+      <div class="form-group">
+        <label for="name">Name *</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email *</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone *</label>
+        <input type="tel" id="phone" name="phone" required>
+      </div>
+
+      <div class="form-group">
+        <label for="company">Company</label>
+        <input type="text" id="company" name="company">
+      </div>
+
+      <div class="form-group">
+        <label for="role">Role</label>
+        <input type="text" id="role" name="role">
+      </div>
+
+      <button type="submit" class="btn btn--primary" style="width:100%;">Submit</button>
+    </form>
+
+    <p id="formSuccessMsg" class="form-success-msg">✓ Thanks! I'll get back to you soon.</p>
+  </div>
+</div>
+
   <!-- NAVBAR -->
   <header class="nav">
     <a href="#hero" class="nav__logo">SURYA VJ<span class="nav__logo-dot">.</span></a>
@@ -287,9 +332,9 @@
       </div>
 
       <div class="hero__cta">
-        <a href="mailto:suryavjkumar2000@gmail.com" class="btn btn--primary">Say Hi <span class="arrow">↗</span></a>
-        <a href="https://www.linkedin.com/in/surya-vijayakumar-svk302000/" target="_blank" rel="noopener" class="btn btn--outline">Connect on LinkedIn</a>
-      </div>
+  <button type="button" class="btn btn--primary" id="openContactModal">Say Hi <span class="arrow">↗</span></button>
+  <a href="https://www.linkedin.com/in/surya-vijayakumar-svk302000/" target="_blank" rel="noopener" class="btn btn--outline">Connect on LinkedIn</a>
+</div>
     </section>
 
     <footer class="footer">
