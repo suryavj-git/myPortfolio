@@ -697,6 +697,35 @@ code {
 .career-step__desc + .pill-row {
   margin-top: auto;
 }
+.solo-engagement {
+  margin-top: 48px;
+  padding-top: 40px;
+  border-top: 1px solid var(--border);
+}
+
+.solo-engagement__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.solo-engagement__client {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 700;
+  margin: 4px 0 0;
+}
+
+.solo-engagement__tag {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--text-faint);
+  margin-left: 8px;
+}
 
 @media (max-width: 768px) {
   .career-grid {
