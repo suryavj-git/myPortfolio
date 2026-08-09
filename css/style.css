@@ -893,7 +893,7 @@ a:focus-visible, button:focus-visible {
     right: 0;
     background: var(--bg);
     border-bottom: 1px solid var(--border);
-    flex-direction: column;
+    flex-direction: column; 
     gap: 0;
     padding: 8px 20px 20px;
     transform: translateY(-120%);
