@@ -25,39 +25,39 @@
       <h3 class="modal-title">Let's connect</h3>
       <p class="modal-subtitle">Fill in your details and I'll get back to you.</p>
 
-      <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="contactForm">
-        <input type="hidden" name="form-name" value="contact">
-        <p style="display:none">
-          <label>Don't fill this out: <input name="bot-field"></label>
-        </p>
+    <form method="POST" id="contactForm">
+  <input type="hidden" name="access_key" value="cff9dac9-2955-4753-8379-f6b9ea27328d">
 
-        <div class="form-group">
-          <label for="name">Name *</label>
-          <input type="text" id="name" name="name" required>
-        </div>
+  <!-- Web3Forms honeypot (spam protection) -->
+  <input type="checkbox" name="botcheck" style="display:none;" tabindex="-1" autocomplete="off">
 
-        <div class="form-group">
-          <label for="email">Email *</label>
-          <input type="email" id="email" name="email" required>
-        </div>
+  <div class="form-group">
+    <label for="name">Name *</label>
+    <input type="text" id="name" name="name" required>
+  </div>
 
-        <div class="form-group">
-          <label for="phone">Phone *</label>
-          <input type="tel" id="phone" name="phone" required>
-        </div>
+  <div class="form-group">
+    <label for="email">Email *</label>
+    <input type="email" id="email" name="email" required>
+  </div>
 
-        <div class="form-group">
-          <label for="company">Company</label>
-          <input type="text" id="company" name="company">
-        </div>
+  <div class="form-group">
+    <label for="phone">Phone *</label>
+    <input type="tel" id="phone" name="phone" required>
+  </div>
 
-        <div class="form-group">
-          <label for="role">Role</label>
-          <input type="text" id="role" name="role">
-        </div>
+  <div class="form-group">
+    <label for="company">Company</label>
+    <input type="text" id="company" name="company">
+  </div>
 
-        <button type="submit" class="btn btn--primary" style="width:100%;">Submit</button>
-      </form>
+  <div class="form-group">
+    <label for="role">Role</label>
+    <input type="text" id="role" name="role">
+  </div>
+
+  <button type="submit" class="btn btn--primary" style="width:100%;">Submit</button>
+</form>
 
       <p id="formSuccessMsg" class="form-success-msg">✓ Thanks! I'll get back to you soon.</p>
     </div>
