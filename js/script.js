@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
   /* ---------- Mobile nav toggle ---------- */
-  const navToggle = document.getElementById('navToggle');
+  const navToggle = document.getElementById('navToggle'); 
   const navLinks = document.getElementById('navLinks');
 
   if (navToggle && navLinks) {
@@ -58,24 +58,28 @@ document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('contactForm');
   const successMsg = document.getElementById('formSuccessMsg');
 
-  if (form) {
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const data = new FormData(form);
+if (form) {
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const data = new FormData(form);
 
-      fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(data).toString()
-      })
-        .then(() => {
+    fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      body: data
+    })
+      .then((res) => res.json())
+      .then((json) => {
+        if (json.success) {
           form.style.display = 'none';
           if (successMsg) successMsg.style.display = 'block';
-        })
-        .catch((err) => {
-          console.error('Form submission error:', err);
-        });
-    });
-  }
+        } else {
+          console.error('Web3Forms error:', json);
+        }
+      })
+      .catch((err) => {
+        console.error('Form submission error:', err);
+      });
+  });
+}
 
 });
